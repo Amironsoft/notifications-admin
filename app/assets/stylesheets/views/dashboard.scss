@@ -23,31 +23,6 @@
   padding-top: $gutter-half;
 }
 
-.spark-bar {
-
-  @include core-16;
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  margin-bottom: $gutter-half;
-  height: $gutter-half;
-  color: $text-colour;
-  text-align: left;
-
-  span {
-    box-sizing: border-box;
-    display: inline-block;
-    overflow: visible;
-    background: $panel-colour;
-    color: $black;
-    padding: 5px 5px 2px 5px;
-    text-indent: -2px;
-    margin: 3px 0 5px 0;
-    transition: width 0.6s ease-in-out;
-  }
-
-}
-
 .file-list {
 
   &-filename {

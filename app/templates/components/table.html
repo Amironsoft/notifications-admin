@@ -160,6 +160,7 @@
 {% macro spark_bar_field(
   count,
   max_count,
+  failure_rate=None,
   id=None
 ) %}
   {% call field(align='right') %}
@@ -171,5 +172,14 @@
         ) }}
       </span>
     </span>
+    {% if failure_rate %}
+      <span class="spark-bar-failure-rate" style="width: {{ failure_rate }}%">
+        {{ failure_rate }}% failed
+      </span>
+    {% else %}
+      <span class="spark-bar-failure-rate" style="width: 0; color: grey">
+        No failures
+      </span>
+    {% endif %}
   {% endcall %}
 {% endmacro %}
